@@ -1,1 +1,1 @@
-# DSA
+Repository for DSA practice
