@@ -1,8 +1,12 @@
-package dsa.stacks;
+package dsa.stackandqueue;
 
 public class RunnerClass {
 
 	public static void main(String[] args) {
+		
+		Integer i = null;
+		Integer v = true ? null :Integer.valueOf(10);
+		
 		StackCCI<Integer> stk = new StackCCI<>();
 		stk.isEmpty();
 		stk.push(4);
