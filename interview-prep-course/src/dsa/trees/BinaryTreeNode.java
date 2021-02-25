@@ -1,6 +1,5 @@
 package dsa.trees;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -11,11 +10,13 @@ public class BinaryTreeNode {
 	public int data;
 	public BinaryTreeNode left;
 	public BinaryTreeNode right;
+	public BinaryTreeNode next;
 
 	public BinaryTreeNode(int data) {
 		this.data = data;
 		left = null;
 		right = null;
+		next = null;
 	}
 
 	/**
@@ -192,4 +193,14 @@ public class BinaryTreeNode {
 		return output;
 	}
 
+	public boolean isBST(BinaryTreeNode root, int min, int max) {
+		if (root == null)
+			return true;
+
+		if (root.data < min || root.data > max) {
+			return false;
+		}
+
+		return isBST(root.left, min, root.data - 1) && isBST(root.right, root.data + 1, max);
+	}
 }

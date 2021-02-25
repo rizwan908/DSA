@@ -6,6 +6,7 @@ public class MergerSort {
 		int sizeLArr = (mid - start) + 1;
 		int sizeRArr = end - mid;
 
+		// initialize left array and right array
 		int[] leftArray = new int[sizeLArr];
 		int[] rightArray = new int[sizeRArr];
 
@@ -72,13 +73,13 @@ public class MergerSort {
 		int arr[] = { 12, 11, 13, 5, 6, 7 };
 
 		System.out.println("Given Array");
-        printArray(arr);
+		printArray(arr);
 
 //        MergeSort ob = new MergeSort();
 		divide(arr, 0, arr.length - 1);
 
 		System.out.println("\nSorted array");
-        printArray(arr);
+		printArray(arr);
 	}
 
 }
